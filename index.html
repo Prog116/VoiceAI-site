@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VoiceAI — голосовой ввод без облака</title>
+  <meta id="meta-description" name="description" content="VoiceAI — локальный голосовой ввод для Windows, macOS и Linux. Говори в любое поле, текст распознаётся на твоём компьютере.">
+  <meta property="og:title" content="VoiceAI — голосовой ввод без облака">
+  <meta property="og:description" content="Локальный голосовой ввод для Windows, macOS и Linux. Без аккаунта и телеметрии.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#f8fbff">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <noscript><style>.reveal{opacity:1 !important;transform:none !important}</style></noscript>
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Перейти к содержимому</a>
+
+  <header class="site-header" id="top">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top" aria-label="VoiceAI">
+        <span class="brand-mark" aria-hidden="true">V</span>
+        <span class="brand-text">
+          <span class="brand-name">VoiceAI</span>
+          <span class="brand-tagline" data-i18n="brand.tagline">Голосовой ввод во все приложения</span>
+        </span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Основная навигация" data-i18n-aria="nav.label">
+        <a class="nav-link is-active" href="#home" aria-current="location" data-i18n="nav.home">Главная</a>
+        <a class="nav-link" href="#features" data-i18n="nav.features">Возможности</a>
+        <a class="nav-link" href="#models" data-i18n="nav.models">Модели</a>
+        <a class="nav-link" href="#cli" data-i18n="nav.cli">CLI</a>
+        <a class="nav-link" href="#docs" data-i18n="nav.docs">Документация</a>
+        <a class="nav-link" href="#faq" data-i18n="nav.faq">FAQ</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-switch" role="group" aria-label="Язык сайта" data-i18n-aria="lang.label">
+          <button class="lang-btn" type="button" data-lang="en" aria-pressed="false">EN</button>
+          <button class="lang-btn is-active" type="button" data-lang="ru" aria-pressed="true">RU</button>
+        </div>
+        <a class="icon-btn" href="#" aria-label="GitHub" title="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 .5A11.5 11.5 0 0 0 .5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2.01c-3.2.7-3.87-1.54-3.87-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.35.78 1.05.78 2.12v3.14c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"></path>
+          </svg>
+        </a>
+        <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Меню" data-i18n-aria="header.menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 6h18M3 12h18M3 18h18"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="home">
+      <div class="mesh mesh-a" aria-hidden="true"></div>
+      <div class="mesh mesh-b" aria-hidden="true"></div>
+      <div class="wrap hero-stack">
+        <div class="hero-copy reveal">
+          <p class="status-line"><span class="status-dot" aria-hidden="true"></span><span data-i18n="hero.eyebrow">OFFLINE · ЛОКАЛЬНО ПО УМОЛЧАНИЮ · OPEN SOURCE</span></p>
+          <h1 class="display">
+            <span data-i18n="hero.title1">Продиктуй</span>&nbsp;- <span data-i18n="hero.title2">и готово</span>
+          </h1>
+          <p class="lead" data-i18n="hero.lead">VoiceAI — голосовой ввод для Windows, macOS и Linux. Текст попадает в любое поле, а распознавание идёт на твоём компьютере.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#download"><span data-i18n="hero.ctaPrimary">Скачать</span><span class="arrow" aria-hidden="true">→</span></a>
+            <a class="btn btn-ghost" href="#docs" data-i18n="hero.ctaSecondary">Документация</a>
+          </div>
+          <ul class="chips">
+            <li class="chip" data-i18n="hero.chip1">Whisper large-v3-turbo</li>
+            <li class="chip" data-i18n="hero.chip2">Windows · macOS · Linux</li>
+            <li class="chip" data-i18n="hero.chip3">Без аккаунта и телеметрии</li>
+            <li class="chip" data-i18n="hero.chip4">CUDA на NVIDIA</li>
+          </ul>
+        </div>
+
+        <div class="hero-demo reveal">
+          <div class="demo-card live-terminal" id="demoCard" aria-label="Демонстрация терминала VoiceAI" data-i18n-aria="demo.label">
+            <div class="live-terminal-bar">
+              <span class="live-terminal-lights" aria-hidden="true"><span></span><span></span><span></span></span>
+              <span class="live-terminal-title">voiceai — live</span>
+              <span class="live-terminal-rec"><span class="live-dot" aria-hidden="true"></span>REC</span>
+            </div>
+            <div class="live-terminal-body">
+              <div class="live-terminal-output" id="terminalOutput"></div>
+              <div class="live-spectro">
+                <div class="live-spectro-head">
+                  <span>spectrogram</span>
+                  <span id="terminalTime">00:04.2</span>
+                </div>
+                <div class="live-bars" id="liveBars" aria-hidden="true"></div>
+              </div>
+              <div class="live-terminal-foot">
+                <span class="live-terminal-stat"><span class="live-dot" aria-hidden="true"></span>local-first</span>
+                <span class="live-terminal-stat">0 bytes sent</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <div class="ticker-group">
+          <span>whisper.cpp</span><span>CUDA</span><span>Rust</span><span>egui</span><span>BSD 3-Clause</span><span>Windows</span><span>macOS</span><span>Linux</span><span>F9</span><span>history.jsonl</span><span>local-first</span>
+        </div>
+        <div class="ticker-group">
+          <span>whisper.cpp</span><span>CUDA</span><span>Rust</span><span>egui</span><span>BSD 3-Clause</span><span>Windows</span><span>macOS</span><span>Linux</span><span>F9</span><span>history.jsonl</span><span>local-first</span>
+        </div>
+      </div>
+    </div>
+
+    <section class="section" id="features">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span class="eyebrow-index">01</span><span data-i18n="features.eyebrow">Возможности</span></p>
+          <h2 class="h2" data-i18n="features.title">Всё, что нужно для диктовки</h2>
+          <p class="section-lead" data-i18n="features.lead">Горячая клавиша, голос и готовый текст в активном поле. Без облачных запросов, аккаунтов и подписок.</p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card reveal">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="10" width="16" height="11" rx="2"></rect>
+                <path d="M8 10V7a4 4 0 0 1 8 0v3"></path>
+                <path d="M12 14v3"></path>
+              </svg>
+            </span>
+            <h3 data-i18n="features.f1.title">Полностью офлайн</h3>
+            <p data-i18n="features.f1.text">Распознавание идёт через whisper.cpp. Модель лежит на диске, в облако не уходит ни байта.</p>
+            <span class="card-tag" data-i18n="features.f1.tag">local-first</span>
+          </article>
+
+          <article class="feature-card reveal">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                <path d="M6 8h.001M10 8h.001M14 8h.001M18 8h.001M8 12h.001M12 12h.001M16 12h.001M7 16h10"></path>
+              </svg>
+            </span>
+            <h3 data-i18n="features.f2.title">Два режима записи</h3>
+            <p data-i18n="features.f2.text">Удерживай F9, чтобы говорить, или включи режим переключения и нажимай один раз. Клавиша меняется в .env.</p>
+            <span class="card-tag" data-i18n="features.f2.tag">hold / toggle</span>
+          </article>
+
+          <article class="feature-card reveal">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="8" y="2" width="8" height="4" rx="1"></rect>
+                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                <path d="M8 11h8M8 16h6"></path>
+              </svg>
+            </span>
+            <h3 data-i18n="features.f3.title">Автовставка в любое поле</h3>
+            <p data-i18n="features.f3.text">Готовая расшифровка вставляется через Ctrl+V (Cmd+V на macOS) в окно, которое было активно.</p>
+            <span class="card-tag" data-i18n="features.f3.tag">Ctrl+V / Cmd+V</span>
+          </article>
+
+          <article class="feature-card reveal">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path>
+              </svg>
+            </span>
+            <h3 data-i18n="features.f4.title">GPU-ускорение</h3>
+            <p data-i18n="features.f4.text">CUDA на Windows с NVIDIA и автоматический откат на CPU. macOS и Linux работают на процессоре.</p>
+            <span class="card-tag" data-i18n="features.f4.tag">CUDA · CPU</span>
+          </article>
+
+          <article class="feature-card reveal">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m7 21-4.3-4.3a2.4 2.4 0 0 1 0-3.4l9.6-9.6a2.4 2.4 0 0 1 3.4 0l5.6 5.6a2.4 2.4 0 0 1 0 3.4L13 21"></path>
+                <path d="M22 21H7"></path>
+                <path d="m5 11 9 9"></path>
+              </svg>
+            </span>
+            <h3 data-i18n="features.f5.title">Чистка речи</h3>
+            <p data-i18n="features.f5.text">Слова-паразиты и замена фраз на лету: например, произнесённые знаки превращаются в символы.</p>
+            <span class="card-tag" data-i18n="features.f5.tag">правила в .env</span>
+          </article>
+
+          <article class="feature-card reveal">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
+                <path d="M3 3v5h5"></path>
+                <path d="M12 7v5l4 2"></path>
+              </svg>
+            </span>
+            <h3 data-i18n="features.f6.title">История и трей</h3>
+            <p data-i18n="features.f6.text">Последние 2000 расшифровок хранятся локально в history.jsonl. На Windows есть иконка в трее.</p>
+            <span class="card-tag" data-i18n="features.f6.tag">history.jsonl</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="how">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span class="eyebrow-index">02</span><span data-i18n="how.eyebrow">Как это работает</span></p>
+          <h2 class="h2" data-i18n="how.title">Три шага до текста</h2>
+          <p class="section-lead" data-i18n="how.lead">От голоса до готового текста в активном поле — пара секунд.</p>
+        </div>
+
+        <div class="how-grid">
+          <article class="step reveal">
+            <span class="step-num" aria-hidden="true">01</span>
+            <h3 data-i18n="how.s1.title">Нажми F9</h3>
+            <p data-i18n="how.s1.text">В любом приложении и любом поле. Удерживай клавишу или включи режим переключения.</p>
+          </article>
+          <article class="step reveal">
+            <span class="step-num" aria-hidden="true">02</span>
+            <h3 data-i18n="how.s2.title">Продиктуй</h3>
+            <p data-i18n="how.s2.text">Звук берётся с выбранного микрофона и нормализуется для распознавания.</p>
+          </article>
+          <article class="step reveal">
+            <span class="step-num" aria-hidden="true">03</span>
+            <h3 data-i18n="how.s3.title">Текст на месте</h3>
+            <p data-i18n="how.s3.text">Готовая расшифровка вставляется автоматически — или копируется в буфер как запасной вариант.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="models">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span class="eyebrow-index">03</span><span data-i18n="models.eyebrow">Модели</span></p>
+          <h2 class="h2" data-i18n="models.title">Модель живёт на твоём диске</h2>
+          <p class="section-lead" data-i18n="models.lead">Распознавание идёт через whisper.cpp. Модель по умолчанию скачивается один раз и переиспользуется.</p>
+        </div>
+
+        <div class="model-grid">
+          <article class="model-card is-default reveal">
+            <div class="model-head">
+              <h3>Whisper large-v3-turbo</h3>
+              <span class="badge" data-i18n="models.m1.badge">по умолчанию</span>
+            </div>
+            <p data-i18n="models.m1.desc">Баланс качества и скорости. Рекомендуемая точка старта для большинства машин.</p>
+            <dl class="specs">
+              <div><dt data-i18n="specs.size">Размер</dt><dd data-i18n="specs.sizeValue">~1.6 ГБ</dd></div>
+              <div><dt data-i18n="specs.speed">Скорость</dt><dd data-i18n="specs.speedValue">быстро</dd></div>
+              <div><dt data-i18n="specs.languages">Языки</dt><dd data-i18n="specs.languagesValue">мультиязычная</dd></div>
+              <div><dt data-i18n="specs.backend">Бэкенд</dt><dd>whisper.cpp</dd></div>
+            </dl>
+          </article>
+
+          <article class="model-card reveal">
+            <div class="model-head">
+              <h3>Whisper large-v3</h3>
+              <span class="badge badge--soon" data-i18n="models.m2.badge">скоро</span>
+            </div>
+            <p data-i18n="models.m2.desc">Максимальное качество для сложного аудио. Появится в каталоге моделей.</p>
+            <dl class="specs">
+              <div><dt data-i18n="specs.size">Размер</dt><dd>~3.1 GB</dd></div>
+              <div><dt data-i18n="specs.speed">Скорость</dt><dd data-i18n="specs.slow">медленнее</dd></div>
+              <div><dt data-i18n="specs.languages">Языки</dt><dd data-i18n="specs.languagesValue">мультиязычная</dd></div>
+              <div><dt data-i18n="specs.backend">Бэкенд</dt><dd>whisper.cpp</dd></div>
+            </dl>
+          </article>
+
+          <article class="model-card reveal">
+            <div class="model-head">
+              <h3>Whisper small</h3>
+              <span class="badge badge--soon" data-i18n="models.m3.badge">скоро</span>
+            </div>
+            <p data-i18n="models.m3.desc">Лёгкая модель для старого железа и мгновенных черновиков.</p>
+            <dl class="specs">
+              <div><dt data-i18n="specs.size">Размер</dt><dd>~466 MB</dd></div>
+              <div><dt data-i18n="specs.speed">Скорость</dt><dd data-i18n="specs.fastValue">быстрее</dd></div>
+              <div><dt data-i18n="specs.languages">Языки</dt><dd data-i18n="specs.languagesValue">мультиязычная</dd></div>
+              <div><dt data-i18n="specs.backend">Бэкенд</dt><dd>whisper.cpp</dd></div>
+            </dl>
+          </article>
+        </div>
+
+        <p class="models-note" data-i18n="models.note">При первом запуске модель скачивается с Hugging Face и кэшируется в папке models/.</p>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="cli">
+      <div class="wrap cli-grid">
+        <div class="reveal">
+          <p class="eyebrow"><span class="eyebrow-index">04</span><span data-i18n="cli.eyebrow">CLI</span></p>
+          <h2 class="h2" data-i18n="cli.title">Собирается из исходников</h2>
+          <p class="section-lead" data-i18n="cli.lead">Проект написан на Rust. Клонируй, выбери бэкенд и запускай.</p>
+          <ul class="bullet-list">
+            <li data-i18n="cli.b1">Rust-тулчейн (edition 2021)</li>
+            <li data-i18n="cli.b2">CUDA Toolkit для GPU-сборки на Windows</li>
+            <li data-i18n="cli.b3">Настройки в .env: клавиши, микрофон, режимы</li>
+            <li data-i18n="cli.b4">package.ps1 собирает переносимую сборку для Windows</li>
+          </ul>
+          <a class="btn btn-ghost" href="#docs"><span data-i18n="cli.link">Открыть руководство по установке</span><span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+
+        <div class="terminal reveal">
+          <div class="terminal-bar">
+            <span class="terminal-dot"></span>
+            <span class="terminal-dot"></span>
+            <span class="terminal-dot"></span>
+            <span class="terminal-title" data-i18n="cli.terminalTitle">voiceai — shell</span>
+          </div>
+          <button class="copy-btn" type="button" data-copy data-i18n="cli.copy">Копировать</button>
+          <pre><code><span class="tok-comment" data-i18n="cli.c1"># 1. клонируем репозиторий</span>
+git clone https://github.com/Prog116/VoiceAI.git
+cd VoiceAI
+
+<span class="tok-comment" data-i18n="cli.c2"># 2. запуск с CUDA (Windows + NVIDIA)</span>
+cargo run --release --features cuda
+
+<span class="tok-comment" data-i18n="cli.c3"># 3. без GPU — CPU-сборка</span>
+cargo run --release</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="docs">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span class="eyebrow-index">05</span><span data-i18n="docs.eyebrow">Документация</span></p>
+          <h2 class="h2" data-i18n="docs.title">Коротко о главном</h2>
+          <p class="section-lead" data-i18n="docs.lead">Гайды по установке, настройке и сборке. Полная документация — на подходе.</p>
+        </div>
+
+        <div class="docs-grid">
+          <a class="doc-card reveal" href="#">
+            <span class="doc-meta" data-i18n="docs.d1.meta">гайд</span>
+            <h3 data-i18n="docs.d1.title">Установка</h3>
+            <p data-i18n="docs.d1.text">Rust, системные зависимости и первый запуск.</p>
+            <span class="doc-arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="doc-card reveal" href="#">
+            <span class="doc-meta" data-i18n="docs.d2.meta">справочник</span>
+            <h3 data-i18n="docs.d2.title">Настройка</h3>
+            <p data-i18n="docs.d2.text">.env, горячие клавиши, микрофон и режимы.</p>
+            <span class="doc-arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="doc-card reveal" href="#">
+            <span class="doc-meta" data-i18n="docs.d3.meta">гайд</span>
+            <h3 data-i18n="docs.d3.title">Сборка</h3>
+            <p data-i18n="docs.d3.text">CUDA, CPU и переносимая сборка для Windows.</p>
+            <span class="doc-arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="doc-card reveal" href="#faq">
+            <span class="doc-meta" data-i18n="docs.d4.meta">быстро</span>
+            <h3 data-i18n="docs.d4.title">FAQ</h3>
+            <p data-i18n="docs.d4.text">Ответы на самые частые вопросы.</p>
+            <span class="doc-arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="faq">
+      <div class="wrap faq-grid">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span class="eyebrow-index">06</span><span data-i18n="faq.eyebrow">FAQ</span></p>
+          <h2 class="h2" data-i18n="faq.title">Частые вопросы</h2>
+          <p class="section-lead" data-i18n="faq.lead">Короткие ответы перед установкой.</p>
+        </div>
+
+        <div class="faq-list reveal">
+          <details class="faq-item" open>
+            <summary><span data-i18n="faq.q1">Нужен ли интернет?</span><span class="faq-plus" aria-hidden="true"></span></summary>
+            <p data-i18n="faq.a1">Только чтобы скачать модель при первом запуске (~1.6 ГБ). Дальше распознавание работает полностью офлайн.</p>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq.q2">Где хранится история?</span><span class="faq-plus" aria-hidden="true"></span></summary>
+            <p data-i18n="faq.a2">Локально в history.jsonl рядом с приложением, не больше 2000 записей. Никуда не отправляется.</p>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq.q3">Можно ли без GPU?</span><span class="faq-plus" aria-hidden="true"></span></summary>
+            <p data-i18n="faq.a3">Да. На Windows приложение само откатывается на CPU, на macOS и Linux используется процессор.</p>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq.q4">Какие системы поддерживаются?</span><span class="faq-plus" aria-hidden="true"></span></summary>
+            <p data-i18n="faq.a4">Windows 10/11, macOS 12+ и Linux с X11. На Wayland пока есть ограничения с глобальными горячими клавишами.</p>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq.q5">Куда уходит текст?</span><span class="faq-plus" aria-hidden="true"></span></summary>
+            <p data-i18n="faq.a5">Никуда. Аудио и расшифровки остаются на твоей машине. Аккаунта и телеметрии нет.</p>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq.q6">Под какой лицензией проект?</span><span class="faq-plus" aria-hidden="true"></span></summary>
+            <p data-i18n="faq.a6">BSD 3-Clause. Код можно использовать, изменять и распространять.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="download" id="download">
+      <div class="mesh mesh-c" aria-hidden="true"></div>
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span class="eyebrow-index">07</span><span data-i18n="download.eyebrow">Скачать</span></p>
+          <h2 class="h2" data-i18n="download.title">Готов продиктовать?</h2>
+          <p class="section-lead" data-i18n="download.lead">Выбери сборку под свою систему. Ссылки на релизы появятся, когда выйдет первая публичная версия.</p>
+        </div>
+
+        <div class="download-grid">
+          <a class="download-btn reveal" href="#">
+            <span class="os">Windows</span>
+            <span class="meta" data-i18n="download.winCuda">CUDA · NVIDIA</span>
+            <span class="dl-arrow" aria-hidden="true">↓</span>
+          </a>
+          <a class="download-btn reveal" href="#">
+            <span class="os">Windows</span>
+            <span class="meta" data-i18n="download.winCpu">CPU-сборка</span>
+            <span class="dl-arrow" aria-hidden="true">↓</span>
+          </a>
+          <a class="download-btn reveal" href="#">
+            <span class="os">macOS</span>
+            <span class="meta" data-i18n="download.mac">Apple Silicon · Intel</span>
+            <span class="dl-arrow" aria-hidden="true">↓</span>
+          </a>
+          <a class="download-btn reveal" href="#">
+            <span class="os">Linux</span>
+            <span class="meta" data-i18n="download.linux">X11 · AppImage</span>
+            <span class="dl-arrow" aria-hidden="true">↓</span>
+          </a>
+        </div>
+
+        <p class="download-note" data-i18n="download.note">BSD 3-Clause · исходники на GitHub · релизы скоро</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="#top" aria-label="VoiceAI">
+            <span class="brand-mark" aria-hidden="true">V</span>
+            <span class="brand-text"><span class="brand-name">VoiceAI</span></span>
+          </a>
+          <p class="footer-tagline" data-i18n="footer.tagline">Голосовой ввод, который остаётся на твоём компьютере.</p>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.colProduct">Продукт</h4>
+          <ul>
+            <li><a href="#features" data-i18n="nav.features">Возможности</a></li>
+            <li><a href="#models" data-i18n="nav.models">Модели</a></li>
+            <li><a href="#cli" data-i18n="nav.cli">CLI</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.colResources">Ресурсы</h4>
+          <ul>
+            <li><a href="#docs" data-i18n="nav.docs">Документация</a></li>
+            <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
+            <li><a href="#download" data-i18n="download.eyebrow">Скачать</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.colProject">Проект</h4>
+          <ul>
+            <li><a href="#">GitHub</a></li>
+            <li><a href="#">BSD 3-Clause</a></li>
+            <li><a href="#">Changelog</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom-left">
+          <span>© 2026 VoiceAI</span>
+          <span data-i18n="footer.made">Сделано на Rust + egui</span>
+          <span data-i18n="footer.note">Каркас сайта: тексты и ссылки — заготовки.</span>
+        </div>
+        <button class="to-top" type="button" data-i18n="footer.top">Наверх ↑</button>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
