@@ -822,25 +822,39 @@
     });
   }
 
-  function setupCleanHomeLinks() {
-    const homeLinks = $$('.brand[href="#top"], .nav-link[href="#home"]');
-    if (!homeLinks.length) return;
+  function setupCleanAnchors() {
+    const cleanUrl = () => {
+      history.replaceState(null, "", location.pathname + location.search);
+    };
 
-    const stripHomeHash = () => {
-      if (location.hash === "#home" || location.hash === "#top") {
-        history.replaceState(null, "", location.pathname + location.search);
+    const scrollToHash = (hash, smooth) => {
+      if (hash === "#home" || hash === "#top") {
+        window.scrollTo({ top: 0, behavior: smooth ? "smooth" : "auto" });
+        return;
+      }
+      const target = document.getElementById(hash.slice(1));
+      if (target) {
+        target.scrollIntoView({ behavior: smooth ? "smooth" : "auto", block: "start" });
       }
     };
 
-    stripHomeHash();
+    $$('a[href^="#"]').forEach((link) => {
+      const hash = link.getAttribute("href");
+      if (!hash || hash === "#") return;
 
-    homeLinks.forEach((link) => {
       link.addEventListener("click", (event) => {
+        const id = hash.slice(1);
+        if (!document.getElementById(id) && id !== "home" && id !== "top") return;
         event.preventDefault();
-        window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
-        stripHomeHash();
+        scrollToHash(hash, !reduceMotion);
+        cleanUrl();
       });
     });
+
+    if (location.hash && location.hash !== "#") {
+      scrollToHash(location.hash, false);
+      cleanUrl();
+    }
   }
 
   function init() {
@@ -855,7 +869,7 @@
     setupCopyButtons();
     setupPlaceholderLinks();
     setupBackToTop();
-    setupCleanHomeLinks();
+    setupCleanAnchors();
 
     let spectroResizeTimer = null;
     window.addEventListener("resize", () => {
