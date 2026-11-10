@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Документация VoiceAI — установка, настройка, сборка</title>
+  <meta id="meta-description" name="description" content="Гайды VoiceAI: установка, настройка .env, горячие клавиши и сборка под Windows, macOS и Linux.">
+  <meta property="og:title" content="Документация VoiceAI — установка, настройка, сборка">
+  <meta property="og:description" content="Гайды VoiceAI: установка, настройка .env, горячие клавиши и сборка под Windows, macOS и Linux.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://prog116.github.io/VoiceAI-site/docs.html">
+  <meta name="theme-color" content="#f8fbff">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/docs.css">
+  <noscript><style>.reveal{opacity:1 !important;transform:none !important}</style></noscript>
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body data-page="docs">
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Перейти к содержимому</a>
+
+  <header class="site-header" id="top">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="VoiceAI">
+        <span class="brand-mark" aria-hidden="true">V</span>
+        <span class="brand-text">
+          <span class="brand-name">VoiceAI</span>
+          <span class="brand-tagline" data-i18n="brand.tagline">Голосовой ввод во все приложения</span>
+        </span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Основная навигация" data-i18n-aria="nav.label">
+        <a class="nav-link" href="index.html" data-i18n="nav.home">Главная</a>
+        <a class="nav-link" href="index.html#features" data-i18n="nav.features">Возможности</a>
+        <a class="nav-link" href="index.html#models" data-i18n="nav.models">Модели</a>
+        <a class="nav-link" href="index.html#cli" data-i18n="nav.cli">CLI</a>
+        <a class="nav-link is-active" href="docs.html" aria-current="page" data-i18n="nav.docs">Документация</a>
+        <a class="nav-link" href="index.html#faq" data-i18n="nav.faq">FAQ</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-switch" role="group" aria-label="Язык сайта" data-i18n-aria="lang.label">
+          <button class="lang-btn" type="button" data-lang="en" aria-pressed="false">EN</button>
+          <button class="lang-btn is-active" type="button" data-lang="ru" aria-pressed="true">RU</button>
+        </div>
+        <a class="icon-btn" href="#" aria-label="GitHub" title="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 .5A11.5 11.5 0 0 0 .5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2.01c-3.2.7-3.87-1.54-3.87-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.35.78 1.05.78 2.12v3.14c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"></path>
+          </svg>
+        </a>
+        <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Меню" data-i18n-aria="header.menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 6h18M3 12h18M3 18h18"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="docs-hero">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span class="eyebrow-index">DOCS</span><span data-i18n="docsPage.eyebrow">Документация</span></p>
+          <h1 class="h2 docs-title" data-i18n="docsPage.title">Руководства VoiceAI</h1>
+          <p class="section-lead" data-i18n="docsPage.lead">Установка, настройка и сборка. Всё, что нужно, чтобы запустить голосовой ввод на своём компьютере.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="docs-body">
+      <div class="wrap docs-layout">
+        <aside class="docs-toc reveal" aria-label="Содержание документации" data-i18n-aria="docsPage.tocLabel">
+          <h2 data-i18n="docsPage.tocTitle">На этой странице</h2>
+          <ul>
+            <li><a href="#install" data-i18n="docsPage.tocInstall">Установка</a></li>
+            <li><a href="#config" data-i18n="docsPage.tocConfig">Настройка</a></li>
+            <li><a href="#build" data-i18n="docsPage.tocBuild">Сборка</a></li>
+          </ul>
+          <a class="docs-back" href="index.html">
+            <span aria-hidden="true">←</span>
+            <span data-i18n="docsPage.back">На главную</span>
+          </a>
+        </aside>
+
+        <div class="docs-content">
+          <article class="docs-article" id="install">
+            <p class="eyebrow"><span class="eyebrow-index">01</span><span data-i18n="docsPage.install.meta">гайд</span></p>
+            <h2 data-i18n="docsPage.install.title">Установка</h2>
+            <p class="docs-lead" data-i18n="docsPage.install.lead">От установки Rust до первого запуска голосового ввода.</p>
+
+            <h3 data-i18n="docsPage.install.reqTitle">Что понадобится</h3>
+            <ul>
+              <li data-i18n="docsPage.install.req1">Windows 10/11, macOS 12+ или Linux с X11. Под Wayland глобальные хоткеи и вставка могут не работать.</li>
+              <li data-i18n="docsPage.install.req2">Стабильный Rust (edition 2021) и инструменты сборки: MSVC на Windows, Xcode Command Line Tools на macOS, build-essential на Linux.</li>
+              <li data-i18n="docsPage.install.req3">Микрофон.</li>
+              <li data-i18n="docsPage.install.req4">Интернет и ~1.6 ГБ свободного места для однократной загрузки модели.</li>
+            </ul>
+
+            <div class="docs-callout">
+              <strong data-i18n="docsPage.install.platformTitle">Особенности платформ</strong>
+              <p data-i18n="docsPage.install.platformWin">Windows: CUDA использует NVIDIA GPU; без него приложение автоматически работает на CPU.</p>
+              <p data-i18n="docsPage.install.platformMac">macOS: только CPU. Разрешите доступ к микрофону и «Универсальный доступ» (Accessibility).</p>
+              <p data-i18n="docsPage.install.platformLinux">Linux: только CPU. Нужны системные библиотеки для аудио и GUI, глобальные хоткеи работают под X11.</p>
+            </div>
+
+            <h3 data-i18n="docsPage.install.step1Title">1. Клонируйте репозиторий</h3>
+            <div class="terminal docs-terminal">
+              <div class="terminal-bar">
+                <span class="terminal-dot"></span>
+                <span class="terminal-dot"></span>
+                <span class="terminal-dot"></span>
+                <span class="terminal-title">git</span>
+              </div>
+              <button class="copy-btn" type="button" data-copy data-i18n="cli.copy">Копировать</button>
+              <pre><code><span class="tok-comment" data-i18n="docsPage.install.c1"># 1. клонируем репозиторий</span>
+git clone https://github.com/Prog116/VoiceAI.git
+cd VoiceAI</code></pre>
+            </div>
+
+            <h3 data-i18n="docsPage.install.step2Title">2. Создайте .env (необязательно)</h3>
+            <p data-i18n="docsPage.install.step2Text">Без .env приложение использует встроенные значения, а настройки можно менять прямо в интерфейсе — они сохранятся в .env автоматически.</p>
+
+            <h3 data-i18n="docsPage.install.step3Title">3. Установите зависимости (Linux)</h3>
+            <div class="terminal docs-terminal">
+              <div class="terminal-bar">
+                <span class="terminal-dot"></span>
+                <span class="terminal-dot"></span>
+                <span class="terminal-dot"></span>
+                <span class="terminal-title">apt</span>
+              </div>
+              <button class="copy-btn" type="button" data-copy data-i18n="cli.copy">Копировать</button>
+              <pre><code><span class="tok-comment" data-i18n="docsPage.install.c2"># 2. зависимости для Linux (Debian/Ubuntu)</span>
+sudo apt update
+sudo apt install -y libasound2-dev libssl-dev libgtk-3-dev \
+    libx11-dev libxkbcommon-dev libxkbcommon-x11-dev libxi-dev \
+    libgl1-mesa-dev libwayland-dev</code></pre>
+            </div>
+
+            <h3 data-i18n="docsPage.install.step4Title">4. Соберите и запустите</h3>
+            <div class="terminal docs-terminal">
+              <div class="terminal-bar">
+                <span class="terminal-dot"></span>
+                <span class="terminal-dot"></span>
+                <span class="terminal-dot"></span>
+                <span class="terminal-title">cargo</span>
+              </div>
+              <button class="copy-btn" type="button" data-copy data-i18n="cli.copy">Копировать</button>
+              <pre><code><span class="tok-comment" data-i18n="docsPage.install.c3"># 3. запуск с CUDA (Windows + NVIDIA)</span>
+cargo run --release --features cuda
+
+<span class="tok-comment" data-i18n="docsPage.install.c4"># 4. CPU-сборка (Windows без NVIDIA, macOS, Linux)</span>
+cargo run --release</code></pre>
+            </div>
+
+            <h3 data-i18n="docsPage.install.step5Title">5. Разрешите доступ (macOS)</h3>
+            <p data-i18n="docsPage.install.step5Text">При первом запуске разрешите доступ к микрофону и «Универсальный доступ» (System Settings → Privacy &amp; Security → Accessibility).</p>
+
+            <div class="docs-callout">
+              <p data-i18n="docsPage.install.modelNote">При первом запуске модель ~1.6 ГБ скачивается в фоне с Hugging Face в папку models/. После загрузки интернет не нужен.</p>
+            </div>
+          </article>
+
+          <article class="docs-article" id="config">
+            <p class="eyebrow"><span class="eyebrow-index">02</span><span data-i18n="docsPage.config.meta">справочник</span></p>
+            <h2 data-i18n="docsPage.config.title">Настройка</h2>
+            <p class="docs-lead" data-i18n="docsPage.config.lead">Значения по умолчанию задаются через .env. Большинство настроек меняется прямо в интерфейсе и сохраняется автоматически.</p>
+
+            <h3 data-i18n="docsPage.config.exampleTitle">Пример .env</h3>
+            <div class="terminal docs-terminal">
+              <div class="terminal-bar">
+                <span class="terminal-dot"></span>
+                <span class="terminal-dot"></span>
+                <span class="terminal-dot"></span>
+                <span class="terminal-title">.env</span>
+              </div>
+              <button class="copy-btn" type="button" data-copy data-i18n="cli.copy">Копировать</button>
+              <pre><code><span class="tok-comment" data-i18n="docsPage.config.c1"># пример .env</span>
+HOTKEY_RECORD=F9
+HOTKEY_EXIT=F12
+RECORDING_MODE=hold
+INPUT_DEVICE=
+MIC_GAIN=10
+FILLER_WORDS=эм,ну,как бы,типа,короче</code></pre>
+            </div>
+
+            <h3 data-i18n="docsPage.config.tableTitle">Все переменные</h3>
+            <div class="docs-table-wrap">
+              <table class="docs-table">
+                <thead>
+                  <tr>
+                    <th data-i18n="docsPage.config.tableVar">Переменная</th>
+                    <th data-i18n="docsPage.config.tableDefault">По умолчанию</th>
+                    <th data-i18n="docsPage.config.tableDesc">Описание</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>WHISPER_MODEL_PATH</code></td>
+                    <td><code>models/ggml-large-v3-turbo.bin</code></td>
+                    <td data-i18n="docsPage.config.v1">Путь к файлу модели .bin.</td>
+                  </tr>
+                  <tr>
+                    <td><code>WHISPER_GPU</code></td>
+                    <td><code>auto</code></td>
+                    <td data-i18n="docsPage.config.v2">auto / 1 / 0: использовать ли GPU в CUDA-сборке Windows (на macOS/Linux всегда CPU).</td>
+                  </tr>
+                  <tr>
+                    <td><code>HOTKEY_RECORD</code></td>
+                    <td><code>F9</code></td>
+                    <td data-i18n="docsPage.config.v3">Клавиша записи; перезаписывается из интерфейса.</td>
+                  </tr>
+                  <tr>
+                    <td><code>HOTKEY_EXIT</code></td>
+                    <td><code>F12</code></td>
+                    <td data-i18n="docsPage.config.v4">Клавиша выхода; перезаписывается из интерфейса.</td>
+                  </tr>
+                  <tr>
+                    <td><code>RECORDING_MODE</code></td>
+                    <td><code>hold</code></td>
+                    <td data-i18n="docsPage.config.v5">Режим записи: hold (Рация) или toggle (Переключатель).</td>
+                  </tr>
+                  <tr>
+                    <td><code>INPUT_DEVICE</code></td>
+                    <td>—</td>
+                    <td data-i18n="docsPage.config.v6">Имя входного устройства (микрофона); пусто — устройство по умолчанию.</td>
+                  </tr>
+                  <tr>
+                    <td><code>MIC_GAIN</code></td>
+                    <td><code>10</code></td>
+                    <td data-i18n="docsPage.config.v7">Усиление сигнала микрофона (1–50).</td>
+                  </tr>
+                  <tr>
+                    <td><code>FILLER_WORDS</code></td>
+                    <td><code>эм,ну,как бы,типа,короче</code></td>
+                    <td data-i18n="docsPage.config.v8">Список слов-паразитов через запятую для локальной очистки.</td>
+                  </tr>
+                  <tr>
+                    <td><code>WORD_REPLACEMENTS</code></td>
+                    <td><span data-i18n="docsPage.config.seeBelow">см. ниже</span></td>
+                    <td data-i18n="docsPage.config.v9">Замены слов, по одному правилу слово=замена на строку.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3 data-i18n="docsPage.config.replacementsTitle">Замены слов по умолчанию</h3>
+            <div class="terminal docs-terminal">
+              <div class="terminal-bar">
+                <span class="terminal-dot"></span>
+                <span class="terminal-dot"></span>
+                <span class="terminal-dot"></span>
+                <span class="terminal-title">WORD_REPLACEMENTS</span>
+              </div>
+              <button class="copy-btn" type="button" data-copy data-i18n="cli.copy">Копировать</button>
+              <pre><code>дефис=-
+двоеточие=:
+точка с запятой=;
+открывающая скобка=(
+закрывающая скобка=)</code></pre>
+            </div>
+
+            <h3 data-i18n="docsPage.config.uiTitle">Настройки интерфейса</h3>
+            <ul>
+              <li data-i18n="docsPage.config.ui1">Тема (тёмная/светлая) — для полного применения требуется перезапуск.</li>
+              <li data-i18n="docsPage.config.ui2">Входное устройство — выбор микрофона из списка; кнопка «Обновить» пересканирует устройства.</li>
+              <li data-i18n="docsPage.config.ui3">Усиление микрофона (1–50×) — применяется сразу; начните с 10–15×.</li>
+              <li data-i18n="docsPage.config.ui4">Режим записи — «Рация» или «Переключатель».</li>
+              <li data-i18n="docsPage.config.ui5">Горячие клавиши — назначаются нажатием и сохраняются в .env.</li>
+              <li data-i18n="docsPage.config.ui6">Путь к модели — можно выбрать файл кнопкой «Обзор»; после смены требуется перезапуск.</li>
+              <li data-i18n="docsPage.config.ui7">Стоп-слова и замены слов — редактируются в интерфейсе и сохраняются автоматически.</li>
+            </ul>
+
+            <div class="docs-callout">
+              <p data-i18n="docsPage.config.saveNote">Изменённые настройки сохраняются в .env автоматически.</p>
+            </div>
+          </article>
+
+          <article class="docs-article" id="build">
+            <p class="eyebrow"><span class="eyebrow-index">03</span><span data-i18n="docsPage.build.meta">гайд</span></p>
+            <h2 data-i18n="docsPage.build.title">Сборка</h2>
+            <p class="docs-lead" data-i18n="docsPage.build.lead">Релизная сборка и портативная версия для Windows.</p>
+
+            <h3 data-i18n="docsPage.build.releaseTitle">Релизная сборка</h3>
+            <p data-i18n="docsPage.build.releaseText">Исполняемый файл появится в target/release/whisper_flow_rust (.exe на Windows).</p>
+            <div class="terminal docs-terminal">
+              <div class="terminal-bar">
+                <span class="terminal-dot"></span>
+                <span class="terminal-dot"></span>
+                <span class="terminal-dot"></span>
+                <span class="terminal-title">cargo</span>
+              </div>
+              <button class="copy-btn" type="button" data-copy data-i18n="cli.copy">Копировать</button>
+              <pre><code><span class="tok-comment" data-i18n="docsPage.build.c1"># Windows с NVIDIA GPU (CUDA)</span>
+cargo build --release --features cuda
+
+<span class="tok-comment" data-i18n="docsPage.build.c2"># Windows без NVIDIA GPU, macOS, Linux (CPU)</span>
+cargo build --release</code></pre>
+            </div>
+
+            <h3 data-i18n="docsPage.build.portableTitle">Портативная версия для Windows</h3>
+            <p data-i18n="docsPage.build.portableText">CUDA-сборка зависит от cublas64_13.dll, cublasLt64_13.dll и Visual C++ runtime. package.ps1 собирает самодостаточный архив.</p>
+            <div class="terminal docs-terminal">
+              <div class="terminal-bar">
+                <span class="terminal-dot"></span>
+                <span class="terminal-dot"></span>
+                <span class="terminal-dot"></span>
+                <span class="terminal-title">pwsh</span>
+              </div>
+              <button class="copy-btn" type="button" data-copy data-i18n="cli.copy">Копировать</button>
+              <pre><code><span class="tok-comment" data-i18n="docsPage.build.c3"># полная сборка с CUDA</span>
+pwsh .\package.ps1
+
+<span class="tok-comment" data-i18n="docsPage.build.c4"># лёгкая CPU-сборка без CUDA</span>
+pwsh .\package.ps1 -CpuOnly</code></pre>
+            </div>
+
+            <div class="docs-callout">
+              <p data-i18n="docsPage.build.portableNote">Результат — папки dist\VoiceAI и dist\VoiceAI-cpu, а также архивы dist\VoiceAI-&lt;версия&gt;-win64.zip. CUDA-библиотеки берутся из установленного CUDA Toolkit.</p>
+            </div>
+
+            <h3 data-i18n="docsPage.build.testsTitle">Тесты</h3>
+            <div class="terminal docs-terminal">
+              <div class="terminal-bar">
+                <span class="terminal-dot"></span>
+                <span class="terminal-dot"></span>
+                <span class="terminal-dot"></span>
+                <span class="terminal-title">cargo</span>
+              </div>
+              <button class="copy-btn" type="button" data-copy data-i18n="cli.copy">Копировать</button>
+              <pre><code><span class="tok-comment" data-i18n="docsPage.build.c5"># запуск тестов</span>
+cargo test</code></pre>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html" aria-label="VoiceAI">
+            <span class="brand-mark" aria-hidden="true">V</span>
+            <span class="brand-text"><span class="brand-name">VoiceAI</span></span>
+          </a>
+          <p class="footer-tagline" data-i18n="footer.tagline">Голосовой ввод, который остаётся на твоём компьютере.</p>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.colProduct">Продукт</h4>
+          <ul>
+            <li><a href="index.html#features" data-i18n="nav.features">Возможности</a></li>
+            <li><a href="index.html#models" data-i18n="nav.models">Модели</a></li>
+            <li><a href="index.html#cli" data-i18n="nav.cli">CLI</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.colResources">Ресурсы</h4>
+          <ul>
+            <li><a href="docs.html" data-i18n="nav.docs">Документация</a></li>
+            <li><a href="index.html#faq" data-i18n="nav.faq">FAQ</a></li>
+            <li><a href="index.html#download" data-i18n="download.eyebrow">Скачать</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.colProject">Проект</h4>
+          <ul>
+            <li><a href="#">GitHub</a></li>
+            <li><a href="#">BSD 3-Clause</a></li>
+            <li><a href="#">Changelog</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom-left">
+          <span>© 2026 VoiceAI</span>
+          <span data-i18n="footer.made">Сделано на Rust + egui</span>
+          <span data-i18n="footer.note">Каркас сайта: тексты и ссылки — заготовки.</span>
+        </div>
+        <button class="to-top" type="button" data-i18n="footer.top">Наверх ↑</button>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
