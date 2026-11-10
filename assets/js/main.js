@@ -822,6 +822,27 @@
     });
   }
 
+  function setupCleanHomeLinks() {
+    const homeLinks = $$('.brand[href="#top"], .nav-link[href="#home"]');
+    if (!homeLinks.length) return;
+
+    const stripHomeHash = () => {
+      if (location.hash === "#home" || location.hash === "#top") {
+        history.replaceState(null, "", location.pathname + location.search);
+      }
+    };
+
+    stripHomeHash();
+
+    homeLinks.forEach((link) => {
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+        window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
+        stripHomeHash();
+      });
+    });
+  }
+
   function init() {
     currentLang = getSavedLang();
     buildLiveSpectro();
@@ -834,6 +855,7 @@
     setupCopyButtons();
     setupPlaceholderLinks();
     setupBackToTop();
+    setupCleanHomeLinks();
 
     let spectroResizeTimer = null;
     window.addEventListener("resize", () => {
