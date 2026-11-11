@@ -31,7 +31,6 @@
         <a class="nav-link is-active" href="#home" aria-current="location" data-i18n="nav.home">Главная</a>
         <a class="nav-link" href="#features" data-i18n="nav.features">Возможности</a>
         <a class="nav-link" href="#models" data-i18n="nav.models">Модели</a>
-        <a class="nav-link" href="#cli" data-i18n="nav.cli">CLI</a>
         <a class="nav-link" href="#docs" data-i18n="nav.docs">Документация</a>
         <a class="nav-link" href="#faq" data-i18n="nav.faq">FAQ</a>
       </nav>
@@ -286,46 +285,10 @@
       </div>
     </section>
 
-    <section class="section section--soft" id="cli">
-      <div class="wrap cli-grid">
-        <div class="reveal">
-          <p class="eyebrow"><span class="eyebrow-index">04</span><span data-i18n="cli.eyebrow">CLI</span></p>
-          <h2 class="h2" data-i18n="cli.title">Собирается из исходников</h2>
-          <p class="section-lead" data-i18n="cli.lead">Проект написан на Rust. Клонируй, выбери бэкенд и запускай.</p>
-          <ul class="bullet-list">
-            <li data-i18n="cli.b1">Rust-тулчейн (edition 2021)</li>
-            <li data-i18n="cli.b2">CUDA Toolkit для GPU-сборки на Windows</li>
-            <li data-i18n="cli.b3">Настройки в .env: клавиши, микрофон, режимы</li>
-            <li data-i18n="cli.b4">package.ps1 собирает переносимую сборку для Windows</li>
-          </ul>
-          <a class="btn btn-ghost" href="docs.html#install"><span data-i18n="cli.link">Открыть руководство по установке</span><span class="arrow" aria-hidden="true">→</span></a>
-        </div>
-
-        <div class="terminal reveal">
-          <div class="terminal-bar">
-            <span class="terminal-dot"></span>
-            <span class="terminal-dot"></span>
-            <span class="terminal-dot"></span>
-            <span class="terminal-title" data-i18n="cli.terminalTitle">voiceai — shell</span>
-          </div>
-          <button class="copy-btn" type="button" data-copy data-i18n="cli.copy">Копировать</button>
-          <pre><code><span class="tok-comment" data-i18n="cli.c1"># 1. клонируем репозиторий</span>
-git clone https://github.com/Prog116/VoiceAI.git
-cd VoiceAI
-
-<span class="tok-comment" data-i18n="cli.c2"># 2. запуск с CUDA (Windows + NVIDIA)</span>
-cargo run --release --features cuda
-
-<span class="tok-comment" data-i18n="cli.c3"># 3. без GPU — CPU-сборка</span>
-cargo run --release</code></pre>
-        </div>
-      </div>
-    </section>
-
     <section class="section" id="docs">
       <div class="wrap">
         <div class="section-head reveal">
-          <p class="eyebrow"><span class="eyebrow-index">05</span><span data-i18n="docs.eyebrow">Документация</span></p>
+          <p class="eyebrow"><span class="eyebrow-index">04</span><span data-i18n="docs.eyebrow">Документация</span></p>
           <h2 class="h2" data-i18n="docs.title">Коротко о главном</h2>
           <p class="section-lead" data-i18n="docs.lead">Гайды по установке, настройке и сборке. Полная документация — на подходе.</p>
         </div>
@@ -356,6 +319,42 @@ cargo run --release</code></pre>
             <span class="doc-arrow" aria-hidden="true">→</span>
           </a>
         </div>
+      </div>
+    </section>
+
+    <section class="download" id="download">
+      <div class="mesh mesh-c" aria-hidden="true"></div>
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span class="eyebrow-index">05</span><span data-i18n="download.eyebrow">Скачать</span></p>
+          <h2 class="h2" data-i18n="download.title">Готов продиктовать?</h2>
+          <p class="section-lead" data-i18n="download.lead">Выбери сборку под свою систему. Для Windows готовые архивы, для macOS и Linux — сборка из исходников.</p>
+        </div>
+
+        <div class="download-grid">
+          <a class="download-btn reveal" href="https://github.com/Prog116/VoiceAI/releases/latest/download/VoiceAI-0.1.0-win64.zip">
+            <span class="os">Windows</span>
+            <span class="meta" data-i18n="download.winCuda">CUDA · NVIDIA</span>
+            <span class="dl-arrow" aria-hidden="true">↓</span>
+          </a>
+          <a class="download-btn reveal" href="https://github.com/Prog116/VoiceAI/releases/latest/download/VoiceAI-0.1.0-win64-cpu.zip">
+            <span class="os">Windows</span>
+            <span class="meta" data-i18n="download.winCpu">CPU-сборка</span>
+            <span class="dl-arrow" aria-hidden="true">↓</span>
+          </a>
+          <a class="download-btn reveal" href="docs.html#build">
+            <span class="os">macOS</span>
+            <span class="meta" data-i18n="download.mac">Сборка из исходников</span>
+            <span class="dl-arrow" aria-hidden="true">↓</span>
+          </a>
+          <a class="download-btn reveal" href="docs.html#build">
+            <span class="os">Linux</span>
+            <span class="meta" data-i18n="download.linux">Сборка из исходников</span>
+            <span class="dl-arrow" aria-hidden="true">↓</span>
+          </a>
+        </div>
+
+        <p class="download-note" data-i18n="download.note">BSD 3-Clause · исходники на GitHub · Windows-сборки доступны</p>
       </div>
     </section>
 
@@ -395,42 +394,6 @@ cargo run --release</code></pre>
         </div>
       </div>
     </section>
-
-    <section class="download" id="download">
-      <div class="mesh mesh-c" aria-hidden="true"></div>
-      <div class="wrap">
-        <div class="section-head reveal">
-          <p class="eyebrow"><span class="eyebrow-index">07</span><span data-i18n="download.eyebrow">Скачать</span></p>
-          <h2 class="h2" data-i18n="download.title">Готов продиктовать?</h2>
-          <p class="section-lead" data-i18n="download.lead">Выбери сборку под свою систему. Для Windows готовые архивы, для macOS и Linux — сборка из исходников.</p>
-        </div>
-
-        <div class="download-grid">
-          <a class="download-btn reveal" href="https://github.com/Prog116/VoiceAI/releases/latest/download/VoiceAI-0.1.0-win64.zip">
-            <span class="os">Windows</span>
-            <span class="meta" data-i18n="download.winCuda">CUDA · NVIDIA</span>
-            <span class="dl-arrow" aria-hidden="true">↓</span>
-          </a>
-          <a class="download-btn reveal" href="https://github.com/Prog116/VoiceAI/releases/latest/download/VoiceAI-0.1.0-win64-cpu.zip">
-            <span class="os">Windows</span>
-            <span class="meta" data-i18n="download.winCpu">CPU-сборка</span>
-            <span class="dl-arrow" aria-hidden="true">↓</span>
-          </a>
-          <a class="download-btn reveal" href="docs.html#build">
-            <span class="os">macOS</span>
-            <span class="meta" data-i18n="download.mac">Сборка из исходников</span>
-            <span class="dl-arrow" aria-hidden="true">↓</span>
-          </a>
-          <a class="download-btn reveal" href="docs.html#build">
-            <span class="os">Linux</span>
-            <span class="meta" data-i18n="download.linux">Сборка из исходников</span>
-            <span class="dl-arrow" aria-hidden="true">↓</span>
-          </a>
-        </div>
-
-        <p class="download-note" data-i18n="download.note">BSD 3-Clause · исходники на GitHub · Windows-сборки доступны</p>
-      </div>
-    </section>
   </main>
 
   <footer class="site-footer">
@@ -448,7 +411,6 @@ cargo run --release</code></pre>
           <ul>
             <li><a href="#features" data-i18n="nav.features">Возможности</a></li>
             <li><a href="#models" data-i18n="nav.models">Модели</a></li>
-            <li><a href="#cli" data-i18n="nav.cli">CLI</a></li>
           </ul>
         </div>
         <div class="footer-col">
