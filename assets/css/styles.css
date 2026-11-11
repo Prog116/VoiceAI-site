@@ -1678,6 +1678,178 @@ section[id] {
   transition-delay: 0.3s;
 }
 
+#home .hero-copy.is-visible {
+  animation: heroCopyIn 0.8s var(--ease) backwards;
+}
+
+#home .hero-demo.is-visible {
+  animation: heroDemoIn 0.9s var(--ease) 0.1s backwards;
+}
+
+#home .hero-copy.is-visible .chip {
+  animation: chipIn 0.5s var(--ease) 0.25s backwards;
+}
+
+#home .hero-copy.is-visible .chip:nth-child(2) {
+  animation-delay: 0.33s;
+}
+
+#home .hero-copy.is-visible .chip:nth-child(3) {
+  animation-delay: 0.41s;
+}
+
+#home .hero-copy.is-visible .chip:nth-child(4) {
+  animation-delay: 0.49s;
+}
+
+#features .feature-card.is-visible {
+  animation: featureIn 0.75s var(--ease) backwards;
+}
+
+#features .feature-card:nth-child(2).is-visible {
+  animation-delay: 0.06s;
+}
+
+#features .feature-card:nth-child(3).is-visible {
+  animation-delay: 0.12s;
+}
+
+#features .feature-card:nth-child(4).is-visible {
+  animation-delay: 0.18s;
+}
+
+#features .feature-card:nth-child(5).is-visible {
+  animation-delay: 0.24s;
+}
+
+#features .feature-card:nth-child(6).is-visible {
+  animation-delay: 0.3s;
+}
+
+#features .feature-card.is-visible .card-icon {
+  animation: iconPop 0.6s var(--ease) 0.15s backwards;
+}
+
+#how .step.is-visible {
+  animation: stepIn 0.8s var(--ease) backwards;
+}
+
+#how .step:nth-child(2).is-visible {
+  animation-delay: 0.12s;
+}
+
+#how .step:nth-child(3).is-visible {
+  animation-delay: 0.24s;
+}
+
+#how .step.is-visible .step-num {
+  animation: stepNumPop 0.6s var(--ease) 0.1s backwards;
+}
+
+#models .model-card.is-visible {
+  animation: modelIn 0.85s var(--ease) backwards;
+}
+
+#models .model-card.is-default.is-visible {
+  animation: modelIn 0.85s var(--ease) backwards, defaultGlow 4.5s ease-in-out 1.2s infinite;
+}
+
+#models .model-card:nth-child(2).is-visible {
+  animation-delay: 0.1s;
+}
+
+#models .model-card:nth-child(3).is-visible {
+  animation-delay: 0.2s;
+}
+
+#models .model-card.is-visible .specs > div {
+  animation: rowIn 0.5s var(--ease) 0.2s backwards;
+}
+
+#models .model-card.is-visible .specs > div:nth-child(2) {
+  animation-delay: 0.28s;
+}
+
+#models .model-card.is-visible .specs > div:nth-child(3) {
+  animation-delay: 0.36s;
+}
+
+#models .model-card.is-visible .specs > div:nth-child(4) {
+  animation-delay: 0.44s;
+}
+
+#docs .doc-card.is-visible {
+  animation: docIn 0.7s var(--ease) backwards;
+}
+
+#docs .doc-card:nth-child(2).is-visible {
+  animation-delay: 0.07s;
+}
+
+#docs .doc-card:nth-child(3).is-visible {
+  animation-delay: 0.14s;
+}
+
+#docs .doc-card:nth-child(4).is-visible {
+  animation-delay: 0.21s;
+}
+
+#docs .doc-card.is-visible .doc-arrow {
+  animation: docArrowIn 0.55s var(--ease) 0.35s backwards;
+}
+
+#download .download-btn.is-visible {
+  animation: dlPop 0.6s var(--ease) backwards;
+}
+
+#download .download-btn:nth-child(2).is-visible {
+  animation-delay: 0.08s;
+}
+
+#download .download-btn:nth-child(3).is-visible {
+  animation-delay: 0.16s;
+}
+
+#download .download-btn:nth-child(4).is-visible {
+  animation-delay: 0.24s;
+}
+
+#download .download-btn.is-visible .dl-arrow {
+  animation: arrowBob 1.8s ease-in-out 0.6s infinite;
+}
+
+#download .mesh-c {
+  animation: meshFloat 16s ease-in-out infinite;
+}
+
+#faq .faq-list.is-visible .faq-item {
+  animation: faqItemIn 0.55s var(--ease) backwards;
+}
+
+#faq .faq-list.is-visible .faq-item:nth-child(2) {
+  animation-delay: 0.06s;
+}
+
+#faq .faq-list.is-visible .faq-item:nth-child(3) {
+  animation-delay: 0.12s;
+}
+
+#faq .faq-list.is-visible .faq-item:nth-child(4) {
+  animation-delay: 0.18s;
+}
+
+#faq .faq-list.is-visible .faq-item:nth-child(5) {
+  animation-delay: 0.24s;
+}
+
+#faq .faq-list.is-visible .faq-item:nth-child(6) {
+  animation-delay: 0.3s;
+}
+
+.section-head.is-visible .eyebrow-index {
+  animation: eyebrowIn 0.5s var(--ease) backwards;
+}
+
 @keyframes blink {
   0%,
   100% {
@@ -1727,6 +1899,208 @@ section[id] {
   }
   to {
     transform: translateX(-50%);
+  }
+}
+
+@keyframes heroCopyIn {
+  from {
+    opacity: 0;
+    transform: translate3d(-34px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes heroDemoIn {
+  from {
+    opacity: 0;
+    transform: translate3d(34px, 18px, 0) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes chipIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes featureIn {
+  0% {
+    opacity: 0;
+    transform: translateY(26px) scale(0.94) rotate(-1.2deg);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-4px) scale(1.01) rotate(0.3deg);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes iconPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.6) rotate(-8deg);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.08) rotate(2deg);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes stepIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-34px) rotate(-1deg);
+  }
+  70% {
+    opacity: 1;
+    transform: translateX(6px) rotate(0.4deg);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes stepNumPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.4) rotate(-14deg);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes modelIn {
+  0% {
+    opacity: 0;
+    transform: translateY(34px) scale(0.9);
+    filter: blur(6px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+    filter: blur(0);
+  }
+}
+
+@keyframes rowIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes docIn {
+  0% {
+    opacity: 0;
+    transform: translateY(22px) rotate(1.2deg) scale(0.97);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes docArrowIn {
+  from {
+    opacity: 0;
+    transform: translateX(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes dlPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.82) translateY(18px);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.03);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes arrowBob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(4px);
+  }
+}
+
+@keyframes faqItemIn {
+  from {
+    opacity: 0;
+    transform: translateX(26px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes meshFloat {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(-18px, 16px, 0) scale(1.07);
+  }
+}
+
+@keyframes defaultGlow {
+  0%,
+  100% {
+    box-shadow: var(--shadow-md);
+  }
+  50% {
+    box-shadow: 0 24px 50px -22px rgba(37, 99, 235, 0.5);
+  }
+}
+
+@keyframes eyebrowIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: none;
   }
 }
 
@@ -2008,8 +2382,11 @@ section[id] {
   *,
   *::before,
   *::after {
+    animation-delay: 0s !important;
     animation-duration: 0.001ms !important;
+    animation-fill-mode: none !important;
     animation-iteration-count: 1 !important;
+    transition-delay: 0s !important;
     transition-duration: 0.001ms !important;
   }
 
